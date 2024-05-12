@@ -1,5 +1,6 @@
 import datetime
 
+
 class Task:
     def __init__(self, description, deadline, status, on_time_status):
         # Конструктор класса Task, принимающий описание задачи, срок выполнения, статус и статус по времени
@@ -36,6 +37,7 @@ class Task:
                     tasks.append(Task(description, deadline, status, on_time_status))
         return tasks
 
+
 def add_new_task():
     # Функция для добавления новой задачи
     description = input("Введите описание новой задачи: ")
@@ -43,6 +45,7 @@ def add_new_task():
     new_task = Task(description, deadline, "", "")
     new_task.write_to_file("tasks.txt")
     print("Новая задача успешно добавлена.")
+
 
 def mark_task_as_done():
     # Функция для пометки задачи как выполненной
@@ -79,10 +82,12 @@ def mark_task_as_done():
     except ValueError:
         print("Введите корректное число.")
 
+
 def exit_program():
     # Функция для выхода из программы
     print("Программа завершена.")
     exit()
+
 
 # Основной цикл программы
 while True:
